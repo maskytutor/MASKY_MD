@@ -124,7 +124,7 @@ async function tiktokCommand(sock, chatId, message) {
                         } else {
                             await sock.sendMessage(chatId, {
                                 image: { url: mediaUrl },
-                                caption: "𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗗 𝗕𝗬 𝗠𝗔𝗦𝗞𝗬 𝗠𝗗
+                                caption: "𝗗𝗢𝗪𝗡𝗟𝗢𝗔𝗗𝗘𝗗 𝗕𝗬 𝗠𝗔𝗦𝗞𝗬 𝗠𝗗"
                             }, { quoted: message });
                         }
                     }
