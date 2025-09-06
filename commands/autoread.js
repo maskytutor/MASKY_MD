@@ -60,7 +60,7 @@ async function autoreadCommand(sock, chatId, message) {
                         isForwarded: true,
                         forwardedNewsletterMessageInfo: {
                             newsletterJid: '120363420654153906@newsletter',
-                            newsletterName: '𝐌𝐚𝐬𝐤𝐲_𝐌𝐃,
+                            newsletterName: '𝐌𝐚𝐬𝐤𝐲_𝐌𝐃',
                             serverMessageId: -1
                         }
                     }
