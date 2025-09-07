@@ -11,6 +11,8 @@
  */
 require('./settings')
 const { Boom } = require('@hapi/boom')
+const express = require("express")
+const app = express()
 const fs = require('fs')
 const chalk = require('chalk')
 const FileType = require('file-type')
@@ -321,4 +323,14 @@ fs.watchFile(file, () => {
     console.log(chalk.redBright(`Update ${__filename}`))
     delete require.cache[file]
     require(file)
+})
+// Serve masky.html on root
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "masky.html"))
+})
+
+// Render requires a PORT to keep service alive
+const PORT = process.env.PORT || 3000
+app.listen(PORT, () => {
+    console.log(`🌍 Web server running on http://localhost:${PORT}`)
 })
